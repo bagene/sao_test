@@ -52,7 +52,7 @@ export default {
         {
           name: 'This is the main task',
           notes: `Instructions go here: ${this.instruction}`,
-          
+          assignee: this.user.gid,
         })
         .then((res) => {
           this.parent = res.data;
@@ -74,7 +74,7 @@ export default {
         {
           name: 'This is the subtask',
           notes: 'This is the task description',
-          
+          assignee: this.parent.assignee.gid,
         })
         .then((res) => {
         });
